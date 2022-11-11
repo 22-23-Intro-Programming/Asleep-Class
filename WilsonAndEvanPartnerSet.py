@@ -5,6 +5,7 @@ def CurrencyConverter():
     print("2. Pound Sterling")
     print("3. Japanese Yen")
     x = input("4. Indian Rupee \n \n")
+    #lists options, takes input
 
     y = input("Please enter how much money you have \n")
 
@@ -13,6 +14,7 @@ def CurrencyConverter():
     print("2. Pound Sterling")
     print("3. Japanese Yen")
     z = input("4. Indian Rupee \n \n")
+    #lists options, gets input
 
     y = float(y)
     
@@ -27,6 +29,7 @@ def CurrencyConverter():
             print(str(y*float(e)) + " Yen")
         if z == "4":
             print(str(y*float(r)) + " Rupee")
+            #list of USD conversions, takes all inputs for use (multiplying input y by conversion factor)
     if x == "2":
         Pound = {"United States Dollar": 1.14,"Japanese Yen": 169.66, "Indian Rupee": 94.57}
         t = Pound.get("United States Dollar")
@@ -38,6 +41,7 @@ def CurrencyConverter():
             print(str(y*float(u)) + " Yen")
         if z == "4":
             print(str(y*float(i)) + " Rupee")
+            #list of Pound conversions, takes all inputs for use (multiplying input y by conversion factor)
     if x == "3":
         Yen = {"Pound Sterling": 0.0059,"United States Dollar": 0.0067, "Indian Rupee": 0.56}
         s = Yen.get("United States Dollar")
@@ -49,6 +53,7 @@ def CurrencyConverter():
             print(str(y*float(d)) + " Pounds")
         if z == "4":
             print(str(y*float(f)) + " Rupee")
+            #list of Yen conversions, takes all inputs for use (multiplying input y by conversion factor)
     if x == "4":
         Rupee = {"Pound Sterling": 0.011,"Japanese Yen": 1.79, "United States Dollar": 0.012}
         h = Rupee.get("United States Dollar")
@@ -60,6 +65,7 @@ def CurrencyConverter():
             print(str(y*float(j)) + " Pounds")
         if z == "3":
             print(str(y*float(k)) + " Yen")
+            #list of Rupee conversions, takes all inputs for use (multiplying input y by conversion factor)
 
 
 def GroceryList(l):
@@ -74,12 +80,15 @@ def GroceryList(l):
                    "eggs": 3.25,
                    "cake": 8.00,
                    "pasta":3.50}
+    #dictionary of all items in the store
 
     total = 0
     
     for i in l:
     
         total = total+(groceryList.get(i))
+        
+    #reads input and adds it's value to total for every time an item appears in the input (l)
 
     print(str(total) + "$")
         
